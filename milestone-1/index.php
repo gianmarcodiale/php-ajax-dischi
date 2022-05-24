@@ -15,9 +15,9 @@ include __DIR__ . "/database.php";
 
 <body>
 
-    <?php foreach ($discs as $disc) : ?>
-        <div class="container">
-            <div class="row">
+    <div class="container">
+        <div class="row">
+            <?php foreach ($discs as $disc) : ?>
                 <div class="card text-center">
                     <img class="card-img-top" src="<?= $disc['poster'] ?>" alt="">
                     <div class="card-body">
@@ -25,9 +25,9 @@ include __DIR__ . "/database.php";
                         <p class="card-text"><?= $disc['author'] ?></p>
                     </div>
                 </div>
-            </div>
+            <?php endforeach ?>
         </div>
-    <?php endforeach ?>
+    </div>
 
 </body>
 
