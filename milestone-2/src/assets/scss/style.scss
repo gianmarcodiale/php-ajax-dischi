@@ -1,0 +1,7 @@
+@import "~/node_modules/bootstrap/scss/bootstrap.scss";
+@import "@/assets/scss/_variables.scss";
+
+body {
+  background-color: $bodyColor;
+  font-family: "Montserrat", sans-serif;
+}
