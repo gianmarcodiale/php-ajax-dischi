@@ -16,11 +16,11 @@ include __DIR__ . "/db.php";
 <body>
 
     <div class="container">
-        <div class="row row-cols-5">
+        <div class="row row-cols-5 gy-3">
             <?php foreach ($discs as $item) : ?>
                 <?php foreach ($item as $key => $disc) : ?>
                     <div class="col">
-                        <div class="card text-center">
+                        <div class="card text-center" style="height:320px">
                             <img class="card-img-top img-fluid text-center" style="max-width:200px" src="<?= $disc['poster'] ?>" alt="">
                             <div class="card-body">
                                 <h4 class="card-title"><?= $disc['title'] ?></h4>
