@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . "/database.php";
+include __DIR__ . "/db.php";
 ?>
 
 <!doctype html>
@@ -17,14 +17,16 @@ include __DIR__ . "/database.php";
 
     <div class="container">
         <div class="row">
-            <?php foreach ($discs as $disc) : ?>
-                <div class="card text-center">
-                    <img class="card-img-top" src="<?= $disc['poster'] ?>" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title"><?= $disc['title'] ?></h4>
-                        <p class="card-text"><?= $disc['author'] ?></p>
+            <?php foreach ($discs as $item) : ?>
+                <?php foreach ($item as $key => $disc) : ?>
+                    <div class="card text-center">
+                        <img class="card-img-top img-fluid text-center" style="max-width:200px" src="<?= $disc['poster'] ?>" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title"><?= $disc['title'] ?></h4>
+                            <p class="card-text"><?= $disc['author'] ?></p>
+                        </div>
                     </div>
-                </div>
+                <?php endforeach ?>
             <?php endforeach ?>
         </div>
     </div>
